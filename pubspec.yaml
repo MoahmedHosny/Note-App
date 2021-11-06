@@ -1,0 +1,44 @@
+name: sqlite_app
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  google_fonts: ^2.1.0
+  sqflite: ^2.0.0+4
+  path: ^1.8.0
+  get: ^4.3.8
+
+dev_dependencies:
+  
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  # assets:
+  #    - images/
+
+
+  
+  fonts:
+    - family: Jannah
+      fonts:
+        - asset: assets/fonts/jannah.ttf
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+    - family: IconBroken
+      fonts:
+        - asset: assets/icons/icons.ttf        
