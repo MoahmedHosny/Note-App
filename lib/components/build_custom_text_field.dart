@@ -19,14 +19,14 @@ Widget buildCustomTextField({
     decoration: InputDecoration(
       hintText: hintText,
       labelText: labelText,
-      labelStyle: TextStyle(color: yellow.withOpacity(0.65)),
+      labelStyle: const TextStyle(color: yellow),
       prefixIcon: Icon(icon, size: 22, color: yellow.withOpacity(0.65)),
       border: const UnderlineInputBorder(),
       enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: grey.withOpacity(0.55), width: 0.55),
+        borderSide: BorderSide(color: grey.withOpacity(0.6), width: 0.6),
       ),
       focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: yellow.withOpacity(0.55), width: 0.55),
+        borderSide: BorderSide(color: yellow.withOpacity(0.6), width: 0.6),
       ),
     ),
     validator: validator,

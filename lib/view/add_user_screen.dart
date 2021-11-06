@@ -26,7 +26,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
         key: formKeyAddClient,
         child: Center(
           child: SizedBox(
-            height: MediaQuery.of(context).size.height * 0.42,
+            height: MediaQuery.of(context).size.height * 0.425,
             child: Card(
               elevation: 15,
               margin: const EdgeInsets.symmetric(horizontal: 10),
