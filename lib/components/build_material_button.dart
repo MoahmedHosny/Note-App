@@ -13,6 +13,6 @@ Widget buildMaterialButton({
     minWidth: double.infinity,
     color: yellow.withOpacity(0.55),
     onPressed: onPressed,
-    child: buildCustomText(text: text!),
+    child: buildCustomText(text: text! , alignment: Alignment.center),
   );
 }

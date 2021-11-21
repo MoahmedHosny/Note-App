@@ -19,6 +19,8 @@ class AddUserScreen extends StatefulWidget {
 String? name, email, phone;
 
 class _AddUserScreenState extends State<AddUserScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,19 +28,18 @@ class _AddUserScreenState extends State<AddUserScreen> {
         key: formKeyAddClient,
         child: Center(
           child: SizedBox(
-            height: MediaQuery.of(context).size.height * 0.425,
+            height: MediaQuery.of(context).size.height * 0.42,
             child: Card(
               elevation: 15,
               margin: const EdgeInsets.symmetric(horizontal: 10),
               child: Padding(
                 padding: const EdgeInsets.only(
-                  top: 20,
+                  top: 15,
                   bottom: 10,
                   left: 15,
                   right: 15,
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     buildCustomText(text: 'NEW CLIENT', fontSize: 18),
                     const SizedBox(height: 8),
@@ -96,7 +97,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
                         if (value == '' || value == null || value.isEmpty) {
                           return 'Please phone should not be empty';
                         } else if (value.length < 11) {
-                          return 'Enter a Number 11 Char ..';
+                          return 'Enter a number 11 char ..';
                         } else {
                           return null;
                         }
@@ -129,6 +130,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
           UserModel(
             name: nameAddClientController.text,
             email: emailAddClientController.text,
+
             phone: phoneAddClientController.text,
             color: colorNumber,
           ),
@@ -138,7 +140,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
         Get.offNamedUntil(Home, (route) => false);
         buildSnackBar(
             title: 'Addition Succeeded',
-            msg: '${nameAddClientController.text}has been added successfully');
+            msg: '${name}has been added successfully');
       } catch (error) {
         buildSnackBar(title: 'Error', msg: error.toString());
       }

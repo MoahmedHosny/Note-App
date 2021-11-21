@@ -46,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
         if (!snapshot.hasData) {
           return Center(
               child: buildCustomText(
-                  text: 'You don\'t have any contacts yet, Create now ..'));
+                  text: 'You don\'t have any contacts yet, Create now ..',
+                  alignment: Alignment.center));
         } else {
           return ListView.builder(
             physics: const BouncingScrollPhysics(),
@@ -65,14 +66,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: [
                         CircleAvatar(
-                            backgroundColor: yellow.withOpacity(0.65),
-                            radius: 24,
-                            child: buildCustomText(
-                              text: usersList![index]
-                                  .name
-                                  .toString()
-                                  .substring(0, 1),
-                            )),
+                          backgroundColor: yellow.withOpacity(0.65),
+                          radius: 24,
+                          child: buildCustomText(
+                            alignment: Alignment.center,
+                            text: usersList![index]
+                                .name
+                                .toString()
+                                .substring(0, 1),
+                          ),
+                        ),
                         const SizedBox(width: 20),
                         Expanded(
                           child: Column(

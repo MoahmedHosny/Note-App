@@ -9,15 +9,19 @@ Widget buildCustomText({
   FontWeight? fontWeight,
   TextOverflow? overflow,
   int? maxLines,
+  Alignment? alignment,
 }) {
-  return Text(
-    text,
-    maxLines: maxLines,
-    overflow: overflow,
-    style: GoogleFonts.merriweatherSans(
-      fontSize: fontSize ?? 16,
-      fontWeight: FontWeight.bold,
-      color: color ?? black,
+  return Align(
+    alignment: alignment ?? Alignment.centerLeft,
+    child: Text(
+      text,
+      maxLines: maxLines,
+      overflow: overflow,
+      style: GoogleFonts.merriweatherSans(
+        fontSize: fontSize ?? 16,
+        fontWeight: FontWeight.bold,
+        color: color ?? black,
+      ),
     ),
   );
 }
